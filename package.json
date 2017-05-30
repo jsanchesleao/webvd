@@ -1,0 +1,19 @@
+{
+  "name": "webvd",
+  "version": "1.0.0",
+  "description": "a video downloader that crawls the web",
+  "main": "src/main.js",
+  "bin": {
+    "webvd": "bin/cli.js"
+  },
+  "scripts": {},
+  "author": "jsanchesleao",
+  "license": "ISC",
+  "dependencies": {
+    "ccrawler": "^1.0.2",
+    "lodash": "^4.17.4",
+    "minimist": "^1.2.0",
+    "mkdirp": "^0.5.1",
+    "request": "^2.81.0"
+  }
+}
