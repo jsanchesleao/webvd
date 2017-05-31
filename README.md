@@ -3,7 +3,7 @@
 A stream video downloader that crawls the web
 
 ## Installation
-`npm install webdv -g`
+`npm install webvd -g`
 
 ## Usage
 

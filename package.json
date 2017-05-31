@@ -1,6 +1,6 @@
 {
   "name": "webvd",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "a video downloader that crawls the web",
   "main": "src/main.js",
   "bin": {
@@ -15,5 +15,9 @@
     "minimist": "^1.2.0",
     "mkdirp": "^0.5.1",
     "request": "^2.81.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jsanchesleao/webvd"
   }
 }
