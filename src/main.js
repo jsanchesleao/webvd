@@ -75,4 +75,4 @@ const main = function(argv) {
   doProcess(save, tags)
 }
 
-module.exports = {main}
+module.exports = {main, doProcess}
