@@ -19,3 +19,7 @@ webvd -c mycrawl -t 1-5
 ```
 
 If there are any https links with unverified certificates, you can disable the check by passing the `--unsafe` flag.
+
+## Using a shared crawler
+
+Crawler files can be shared by saving them in the [dontpad](http://dontpad.com) service. If you have a crawler saved, say, in the http://dontpad.com/my-crawler url, simply run `webvd -c @my-crawler -t 1` to download it with `tag 1`.

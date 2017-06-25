@@ -1,12 +1,23 @@
 const ccrawler = require('ccrawler')
 const {streamToFile} = require('./util')
+const getDontpad = require('get-dontpad')
 const _ = require('lodash')
+
+const externalScript = function(file) {
+  return file.startsWith('@');
+}
 
 const executeCrawler = function(file, argv) {
   return function(tag) {
     let variables = _.cloneDeep(argv)
     variables.tag = tag
-    return ccrawler.execFile(file, variables).then(streamToFile(tag))
+    if (externalScript(file)) {
+      return getDontpad(file.slice(1)).then(
+        text => ccrawler.exec(text.trim(), variables).then(streamToFile(tag)))
+    }
+    else {
+      return ccrawler.execFile(file, variables).then(streamToFile(tag))
+    }
   }
 }
 

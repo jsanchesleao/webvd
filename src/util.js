@@ -17,8 +17,12 @@ const basename = function(name) {
   return path.parse(name).name
 }
 
+const removeAtSign = function(text) {
+  return text.replace(/^@/, '');
+}
+
 const prefix = function() {
-  return args.prefix || args.p || basename(args.config) || basename(args.c) || ''
+  return removeAtSign(args.prefix || args.p || basename(args.config) || basename(args.c) || '')
 }
 
 const formatTag = tag => {
