@@ -11,6 +11,7 @@ const executeCrawler = function(file, argv) {
   return function(tag) {
     let variables = _.cloneDeep(argv)
     variables.tag = tag
+    variables.alts = 'all'
     if (externalScript(file)) {
       return getDontpad(file.slice(1)).then(
         text => ccrawler.exec(text.trim(), variables).then(streamToFile(tag)))
