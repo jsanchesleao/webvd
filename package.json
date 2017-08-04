@@ -1,6 +1,6 @@
 {
   "name": "webvd",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "a video downloader that crawls the web",
   "main": "src/main.js",
   "bin": {
